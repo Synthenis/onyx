@@ -1,0 +1,46 @@
+{
+  "name": "synthenis-onyx",
+  "version": "1.0.0",
+  "description": "Dependency-free adaptive engine for contextual suggestions, predictive UI and personalized hints. Client-side, deterministic and explainable.",
+  "license": "MIT",
+  "author": "Synthenis",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "types",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "keywords": [
+    "adaptive",
+    "suggestions",
+    "contextual",
+    "personalization",
+    "client-side",
+    "explainable"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
